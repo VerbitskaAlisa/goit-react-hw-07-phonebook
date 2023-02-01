@@ -1,4 +1,3 @@
-import { nanoid } from "nanoid";
 import { useState } from "react";
 import { Label, Input, Wrap, AddButton, InputField } from './Form.styled';
 import { useDispatch, useSelector } from "react-redux";
