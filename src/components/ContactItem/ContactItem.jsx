@@ -7,8 +7,8 @@ import { DeleteBtn, NameText, NumberText } from './ContactItem.styled';
 const ContactItem = ({id, name, number}) => {
     const dispatch = useDispatch();
 
-    const deleteContacts = contactId => {
-        dispatch(deleteContact(contactId));
+    const deleteContacts = () => {
+        dispatch(deleteContact(id));
     }
 
 
@@ -16,7 +16,7 @@ const ContactItem = ({id, name, number}) => {
                 <>
                 <NameText>{name}</NameText>
                 <NumberText>{number}</NumberText>
-                <DeleteBtn type="button" onClick={() => deleteContacts(id)}>Delete</DeleteBtn>
+                <DeleteBtn type="button" onClick={deleteContacts}>Delete</DeleteBtn>
                 </>
             )
 }

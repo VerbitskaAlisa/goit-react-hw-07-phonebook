@@ -30,7 +30,7 @@ export default function Form ({ showModal }) {
             if (contacts.find(contact => contact.name === name)) {
                    return alert(`${name} is is already in contacts.`);
             } else {
-             dispatch(addContact({id: nanoid(), name, number}));
+             dispatch(addContact({name, number}));
              showModal();
              reset();
         }

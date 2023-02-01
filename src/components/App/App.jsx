@@ -30,7 +30,7 @@ useEffect(() => {
              <Filter />
              {isLoading && !error && <Loader />}
              {error && <p>{error}</p>}
-             {!isLoading && <ContactList />}
+             {!isLoading && !error && <ContactList />}
              {showModal && <ModalWindow onClose={toggleModal}><Form showModal={toggleModal}/></ModalWindow>}
              </Container>
 }
